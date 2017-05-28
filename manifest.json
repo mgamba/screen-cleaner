@@ -1,0 +1,16 @@
+{
+    "name": "Screen Cleaner",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Remove anything on a web page by right-clicking it and selecting "Delete Element" from the context menu",
+    "permissions": [
+      "contextMenus"
+     ],
+    "background": { 
+      "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }]
+}
